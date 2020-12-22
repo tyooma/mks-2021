@@ -1,0 +1,36 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+}
+
+.days {
+    display: flex;
+    justify-content: space-between;
+}
+
+.day {
+    cursor: pointer;
+    transition: background-color .3s;
+    
+}
+
+.day:hover {
+    background-color: red;
+    
+}
+
+.monthYear {
+    display: flex;
+    justify-content: space-between;
+}
+
+.daysOfTheWeek {
+    display: flex;
+    justify-content: space-between;
+}
+
+.selected {
+    background-color: red;
+    border-radius: 50%;
+}
+

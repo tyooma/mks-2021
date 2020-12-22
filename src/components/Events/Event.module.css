@@ -1,0 +1,24 @@
+.eventBlock {
+    display: flex;
+    justify-content: cco;
+}
+
+.visible {
+
+}
+
+.notVisible {
+    display: none;
+}
+
+.eventBlock {
+    border: 1px solid red;
+}
+
+.eventBlock_header {
+
+}
+
+img {
+    width: 100px;
+}
