@@ -1,21 +1,13 @@
-import * as React from 'react';
-import classes from './Event.module.css';
+import * as React from 'react'
 
-
-
-function Event(props) {
-    return <div className={classes.eventBlock}>
-        <div className={classes.eventBlock_header}>
-            {props.event.title}
-        </div>
-        <div className={classes.eventBlock_body}>
-            <div className={classes.eventBlock_body_image}>
-                <img src={props.event.image} alt="" />
-            </div>
-            <div className={classes.eventBlock_body_description}>
-                {props.event.description}
-            </div>
-        </div>
+export const Event = ({ event }) => (
+  <div className='event'>
+    <div className='event__img-container'>
+      <img src={event.image} alt='event poster' className='event__img' />
     </div>
-}
-export default Event;
+    <div className='event__info'>
+      <div className='event__title'>{event.title}</div>
+      <div className='event__desc'>{event.description}</div>
+    </div>
+  </div>
+)

@@ -1,0 +1,68 @@
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__btn {
+    margin-bottom: 20px;
+
+    width: 200px;
+    padding: 16px;
+
+    text-align: center;
+    color: $fff;
+    background-color: $dark;
+
+    border-radius: 20px;
+
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 0.95;
+      cursor: pointer;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+  }
+
+  &__input {
+    padding: 6px 10px;
+    margin-bottom: 10px;
+
+    border: 1px solid $grey;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  &__btn-sign {
+    margin-top: 15px;
+
+    width: 200px;
+    padding: 10px;
+
+    text-align: center;
+    color: $dark;
+    background-color: $yell;
+
+    outline: none;
+
+    border: none;
+    border-radius: 14px;
+
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+}

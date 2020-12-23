@@ -1,0 +1,30 @@
+.btn {
+  @include padding-top(20, 12);
+  @include padding-right(36, 18);
+  @include padding-bottom(20, 12);
+  @include padding-left(36, 18);
+
+  
+  @include margin-top(69, 33);
+
+  @include width(344, 172);
+  @include height(74, 37);
+
+  border-radius: 45px;
+
+  transition: transform .3s, opacity .3s;
+
+  &:hover {
+    transform: scale(1.05);
+
+    opacity: 0.9;
+
+    cursor: pointer;
+  }
+
+  &__text {
+    @include font(26, 13);
+    font-weight: bold;
+    text-align: center;
+  }
+}

@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import SigInForm from './SignInForm'
 
-const SignInButton = () => {
-    const [signInToggle, setSignInToggle] = useState(false)
+export const SignInButton = () => {
+  const [signInToggle, setSignInToggle] = useState(false)
 
-    return (
-        <div>
-            <button onClick={() => setSignInToggle(!signInToggle)}>
-                Sign In
-            </button>
-            { signInToggle ? <SigInForm /> : ''}
-        </div>
-    )
+  return (
+    <>
+      <div onClick={() => setSignInToggle(!signInToggle)} className='auth__btn'>
+        для адміністрації
+      </div>
+      {signInToggle ? <SigInForm /> : ''}
+    </>
+  )
 }
-
-export default SignInButton;

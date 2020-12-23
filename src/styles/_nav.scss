@@ -1,0 +1,32 @@
+.nav {
+  @include margin-bottom(60, 30);
+
+  &__list {
+    @include width(1670, 300);
+
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+
+    @media (max-width: 376px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    @include font(18, 9);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $dark;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $vine;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.calendar {
+  @include margin-bottom(44, 22);
+
+  @include width(1670, 300);
+
+  display: flex;
+  flex-direction: column;
+
+  &__bar {
+    @include margin-bottom(34, 17);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__month {
+    @include font(24, 16);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $dark;
+  }
+
+  &__arrow {
+    @include width(38, 19);
+    @include height(38, 19);
+
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+
+  &__days {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__day {
+    @include font(36, 18);
+    font-weight: 700;
+    color: $grey;
+
+    cursor: pointer;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &__selected {
+    @include width(72, 36);
+    @include height(40, 20);
+    
+    @include line-height(38, 20);
+    text-align: center;
+    color: $fff;
+    background-color: $red;
+
+    border-radius: 30px;
+  }
+
+  &__weekend {
+    color: $red;
+  }
+}

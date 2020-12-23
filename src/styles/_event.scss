@@ -1,0 +1,15 @@
+.event {
+  @include margin-top(60, 30);
+  @include margin-bottom(40, 20);
+
+  display: flex;
+  justify-content: flex-start;
+
+  &__img-container {
+    height: 100%;
+  }
+
+  &__img {
+    @include width(500, 200);
+  }
+}

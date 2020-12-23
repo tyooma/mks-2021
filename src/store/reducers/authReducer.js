@@ -1,26 +1,24 @@
 const initState = {
-    authError: null
+  authError: null
 }
 
 const authReducer = (state = initState, action) => {
-    switch (action.type) {
-        case 'LOGIN_ERROR':
-
-            return {
-                ...state,
-                authError: 'Invalid Email or Password'
-            }
-        case 'LOGIN_SUCCESS':
-
-            return {
-                ...state,
-                authError: null
-            }
-        case 'SIGNOUT_SUCCESS':
-            return state
-        default:
-            return state
-    }
+  switch (action.type) {
+    case 'LOGIN_ERROR':
+      return {
+        ...state,
+        authError: 'Invalid Email or Password'
+      }
+    case 'LOGIN_SUCCESS':
+      return {
+        ...state,
+        authError: null
+      }
+    case 'SIGNOUT_SUCCESS':
+      return state
+    default:
+      return state
+  }
 }
 
-export default authReducer;
+export default authReducer

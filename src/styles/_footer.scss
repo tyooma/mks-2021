@@ -1,0 +1,59 @@
+.footer {
+  @include padding-top(130, 65);
+  @include padding-bottom(130, 65);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 376px) {
+    align-items: center;
+  }
+
+  &__phone {
+    @include margin-bottom(30, 15);
+
+    @include font(24, 14);
+    font-weight: 600;
+    text-decoration: none;
+    color: $dark;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $vine;
+    }
+  }
+
+  &__email {
+    @include margin-bottom(30, 15);
+
+    @include font(24, 14);
+    font-weight: 600;
+    text-decoration: none;
+    color: $dark;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $vine;
+    }
+  }
+  
+  &__icons {
+    @include margin-bottom(20, 10);
+  }
+
+  &__link {
+    margin-right: 30px;
+
+    @include font(50, 25);
+    color: $dark;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $vine;
+    }
+  }
+}

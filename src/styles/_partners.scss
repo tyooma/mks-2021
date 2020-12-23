@@ -1,0 +1,47 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include margin-bottom(100, 30);
+
+    @include width(1065, 260);
+
+    @include font(48, 24);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    color: $dark;
+  }
+
+  &__logos {
+    @include margin-bottom(30, 15);
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 60px;
+
+    @media (max-width: 1371px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 50px;
+    }
+
+    @media (max-width: 769px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__img {
+    @include width(263, 120);
+    @include height(263, 120);
+
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.09);
+
+      cursor: pointer;
+    }
+  }
+}

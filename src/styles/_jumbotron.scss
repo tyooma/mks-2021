@@ -1,0 +1,30 @@
+.jumbotron {
+  @include padding-top(125, 62);
+  @include padding-right(219, 15);
+  @include padding-bottom(125, 62);
+  @include padding-left(219, 15);
+
+  @include margin-bottom(100, 30);
+
+  @include width(1670, 250);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  &__title {
+    @include margin-bottom(69, 34);
+
+    @include font(60, 30);
+    font-weight: bold;
+  }
+
+  &__desc {
+    @include font(26, 13);
+    @include line-height(40, 20);
+  }
+}

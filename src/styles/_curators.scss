@@ -1,0 +1,134 @@
+.curators-decor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__decor {
+    @include margin-bottom(135, 69);
+  
+    display: flex;
+    align-items: center;
+  }
+  
+  &__ornament {
+    @include width(800, 261);
+    height: 40px;
+  
+    background: url('../assets/dec-1.svg');
+  }
+  
+  &__ornament_left {
+    background-position: right;
+  }
+  
+  &__ornament_right {
+    background-position: left;
+  }
+  
+  &__decor-text {
+    @include margin-right(15, 8);
+    @include margin-left(15, 8);
+
+    @include width(410, 80);
+  
+    @include font(32, 16);
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+    color: $vine;
+  }
+}
+
+.curators {
+  @include margin-bottom(80, 30);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 65px;
+
+  @media (max-width: 769px) {
+    @include padding-right(250, 50);
+    @include padding-left(250, 50);
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 45px;
+  }
+
+  @media (max-width: 376px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+
+  .curator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      margin-bottom: 20px;
+
+      @include width(300, 100);
+      @include height(300, 100);
+
+      border-radius: 6px;
+    }
+
+    &__name {
+      margin-bottom: 20px;
+
+      @include font(24, 14);
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: $vine;
+
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &__position {
+      @include width (300, 100);
+
+      @include font(18, 10);
+      font-weight: 600;
+      text-align: center;
+      color: $grey;
+    }
+  }
+}
+
+.initiative-logos {
+  @include margin-bottom(200, 60);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 769px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 30px;
+  }
+
+  @media (max-width: 376px) {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 15px;
+  }
+
+  &__link {
+    justify-self: center;
+  }
+
+  &__item {
+    @include width(270, 145);
+    @include height(135, 68);
+
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.09);
+
+      cursor: pointer;
+    }
+  }
+}

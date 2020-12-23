@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,200&display=swap');
+
+@import './colors';
+@import './mixins';
+@import './header';
+@import './nav';
+@import './calendar';
+@import './aef';
+@import './events';
+@import './event';
+@import './jumbotron';
+@import './btn';
+@import './section';
+@import './curators';
+@import './partners';
+@import './footer';
+@import './auth';
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  box-sizing: border-box;
+}
+
+.wrapper {
+  @include padding-right(120, 15);
+  @include padding-left(120, 15);
+
+  overflow: hidden;
+}

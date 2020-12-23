@@ -1,0 +1,130 @@
+.aef {
+  &__new {
+    margin: 0 auto 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__label {
+    @include margin-bottom(10, 8);
+
+    @include font(24, 12);
+    font-weight: 500;
+  }
+
+  &__input {
+    @include padding-top(20, 10);
+    @include padding-right(20, 10);
+    @include padding-bottom(20, 10);
+    @include padding-left(20, 10);
+    @include margin-bottom(30, 15);
+
+    @include width(900, 200);
+
+    @include font(24, 12);
+
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    outline: none;
+  }
+
+  &__textarea {
+    @include padding-top(20, 10);
+    @include padding-right(20, 10);
+    @include padding-bottom(20, 10);
+    @include padding-left(20, 10);
+    @include margin-bottom(30, 15);
+
+    @include width(900, 200);
+    @include height(300, 100);
+
+    @include font(24, 12);
+
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    outline: none;
+  }
+
+  &__date {
+    @include padding-top(20, 10);
+    @include padding-right(20, 10);
+    @include padding-bottom(20, 10);
+    @include padding-left(20, 10);
+    @include margin-bottom(30, 15);
+
+    @include width(900, 200);
+
+    @include font(24, 12);
+
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    outline: none;
+  }
+
+  &__image {
+    @include padding-top(20, 10);
+    @include padding-right(20, 10);
+    @include padding-bottom(20, 10);
+    @include padding-left(20, 10);
+    @include margin-bottom(40, 20);
+
+    @include width(900, 200);
+    
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    outline: none;
+
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+
+    &::before {
+      content: 'Завантажити картинку';
+      @include padding-top(22, 12);
+      @include padding-right(20, 10);
+      @include padding-bottom(24, 14);
+      @include padding-left(20, 10);
+      margin-left: -20px;
+
+      @include font(24, 12);
+      
+      background-color: #efefef;
+    }
+  }
+
+  &__submit {
+    @include padding-top(20, 12);
+    @include padding-right(36, 18);
+    @include padding-bottom(20, 12);
+    @include padding-left(36, 18);
+
+    @include width(344, 172);
+    @include height(74, 37);
+
+    @include font(26, 13);
+    font-weight: bold;
+    text-align: center;
+
+    border: none;
+    border-radius: 45px;
+
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+
+      opacity: 0.9;
+
+      cursor: pointer;
+    }
+  }
+}
