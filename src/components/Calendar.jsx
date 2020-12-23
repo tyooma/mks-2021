@@ -74,7 +74,8 @@ export const Calendar = () => {
                     calendarDays.getDay() === 0 || calendarDays.getDay() === 6
                 },
                 { calendar__today: d === today.getDate() },
-                { calendar__selected: d === day }
+                { calendar__selected: d === day },
+                {calendar__selected: calendarDays.getDate() === day}
               )}
               onClick={() => {
                 setDate(new Date(year, month, d))

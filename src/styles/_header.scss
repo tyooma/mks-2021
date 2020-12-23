@@ -10,6 +10,8 @@
 
     @include width(170, 85);
     @include height(170, 85);
+
+    animation: logo 110s linear 0s infinite normal;
   }
 
   &__videos {
@@ -69,5 +71,14 @@
     text-align: center;
     text-transform: uppercase;
     color: $vine;
+  }
+}
+
+@keyframes logo {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

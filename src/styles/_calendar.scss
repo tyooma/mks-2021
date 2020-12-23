@@ -38,6 +38,17 @@
   &__days {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1360px) {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      text-align: center;
+    }
+
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(7, 1fr);
+      text-align: center;
+    }
   }
 
   &__day {
@@ -49,8 +60,12 @@
     transition: color 0.5s;
 
     &:hover {
-      color: $dark;
+      color: $vine;
     }
+  }
+
+  &__weekend {
+    color: $red;
   }
 
   &__selected {
@@ -63,9 +78,5 @@
     background-color: $red;
 
     border-radius: 30px;
-  }
-
-  &__weekend {
-    color: $red;
   }
 }
