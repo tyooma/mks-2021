@@ -2,6 +2,8 @@
   @include margin-top(60, 30);
   @include margin-bottom(40, 20);
 
+  position: relative;
+
   display: flex;
   justify-content: flex-start;
 
@@ -38,5 +40,26 @@
   &__description {
     @include font(30, 15);
     @include line-height(40, 20);
+  }
+
+  &__delete {
+    @include width(36, 18);
+    @include height(36, 18);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include font(36, 18);
+
+    color: $red;
+
+    transition: transform .3s;
+
+    &:hover {
+      transform: rotate(90deg);
+
+      cursor: pointer;
+    }
   }
 }

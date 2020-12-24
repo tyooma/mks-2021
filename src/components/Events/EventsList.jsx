@@ -1,12 +1,27 @@
-import * as React from 'react'
+import React, { useEffect, useState } from 'react'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 
-import { Event } from './Event'
+import Event from './Event'
 
 function EventsList(props) {
-  const events = props.events
+  const eventList = props.events
+
+  const [events, setEvents] = useState(null)
+
+  useEffect(() => {
+    if (eventList) {
+      setEvents(Object.keys(eventList).map((key) => {
+        return {
+          ...eventList[key],
+          megaId: key
+        }
+      }))
+    }
+  }, [eventList])
+  
+
   const date = props.date.toDateString()
 
   return props.isVisible
@@ -24,7 +39,7 @@ function EventsList(props) {
 
 const mapStateToProps = (state) => {
   return {
-    events: state.firestore.ordered.Events
+    events: state.firestore.data.Events
   }
 }
 
