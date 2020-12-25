@@ -1,5 +1,5 @@
 export const createEvent = (event) => {
-  return (dispatch, getState, { getFirestore }) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore()
     firestore
       .collection('Events')
@@ -16,7 +16,7 @@ export const createEvent = (event) => {
 }
 
 export const deleteEvent = (id) => {
-  return (dispatch, getState, { getFirestore }) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore()
     firestore
       .collection('Events')

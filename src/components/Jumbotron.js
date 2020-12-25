@@ -10,7 +10,9 @@ export const Jumbotron = ({
   btn,
   moreBtn,
   titleColor,
-  descColor
+  descColor,
+  isFormVisible,
+  setIsFormVisible
 }) => (
   <div className='jumbotron' style={{ backgroundColor: background }}>
     <div className='jumbotron__title' style={{ color: titleColor }}>
@@ -24,6 +26,16 @@ export const Jumbotron = ({
         href={moreBtn.href}
       />
     </div>
-    {btn.text ? <Btn btn={btn} /> : ''}
+    {btn.text ? (
+      isFormVisible !== null ? (
+        <div onClick={() => setIsFormVisible(true)}>
+          <Btn btn={btn} />
+        </div>
+      ) : (
+        <Btn btn={btn} />
+      )
+    ) : (
+      null
+    )}
   </div>
 )

@@ -33,13 +33,24 @@
   &__title {
     @include margin-bottom(60, 30);
 
-    @include font(60, 30);
+    @include font(50, 20);
     font-weight: bold;
   }
 
-  &__description {
-    @include font(30, 15);
-    @include line-height(40, 20);
+  &__desc {
+    @include margin-bottom(60, 30);
+
+    @include font(24, 14);
+    @include line-height(30, 18);
+  }
+
+  &__link-container {
+    display: flex;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: rgb(85, 155, 247);
   }
 
   &__delete {

@@ -12,15 +12,7 @@
 
   border-radius: 45px;
 
-  transition: transform .3s, opacity .3s;
-
-  &:hover {
-    transform: scale(1.05);
-
-    opacity: 0.9;
-
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   &__text {
     @include font(26, 13);

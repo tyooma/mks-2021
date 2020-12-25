@@ -42,6 +42,7 @@ const AddEventForm = (props) => {
     const eventData = {
       title: data.title,
       description: data.description,
+      url: data.url,
       eventDate: data.date.toDateString(),
       id: Date.now(),
       image: fileUrl
@@ -79,6 +80,16 @@ const AddEventForm = (props) => {
             ref={register}
             required
             className='aef__textarea'
+          />
+          <label htmlFor='url' className='aef__label'>
+            Посилання на подію
+          </label>
+          <input
+            type='url'
+            name='url'
+            placeholder='Вставте посилання на подію (Facebook, Instagram і тд)'
+            ref={register}
+            className='aef__input'
           />
           <label htmlFor='date' className='aef__label'>
             Дата події

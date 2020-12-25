@@ -1,0 +1,129 @@
+.forms {
+  @include padding-top(40, 20);
+  @include padding-right(40, 20);
+  @include padding-bottom(40, 20);
+  @include padding-left(40, 20);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  background-color: $fff;
+
+  border: 1px solid $grey;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+
+  &__title {
+    @include margin-bottom(40, 20);
+
+    @include font(16, 12);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__close {
+    @include width(20, 18);
+    @include height(20, 18);
+
+    position: absolute;
+    @include right(40, 20);
+
+    @include font(20, 18);
+
+    color: $red;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: rotate(90deg);
+
+      cursor: pointer;
+    }
+  }
+
+  &__label {
+    @include margin-bottom(12, 10);
+
+    @include font(12, 10);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__input {
+    @include margin-bottom(16, 10);
+    padding: 5px 10px;
+
+    @include width(500, 200);
+    @include height(40, 20);
+
+    border: 2px solid $dark;
+    border-radius: 10px;
+
+    outline: none;
+  }
+
+  &__choose {
+    @include margin-bottom(12, 10);
+
+    display: flex;
+    align-items: center;
+
+    @include font(12, 10);
+    font-weight: 600;
+  }
+
+  &__line {
+    @include margin-bottom(20, 10);
+
+    width: 100%;
+
+    border: none;
+    border-top: 1px solid $dark;
+  }
+
+  &__textarea {
+    padding: 5px 10px;
+    @include margin-bottom(30, 15);
+
+    @include width(500, 200);
+    @include height(150, 60);
+
+    border: 2px solid $dark;
+    border-radius: 10px;
+
+    outline: none;
+  }
+
+  &__submit {
+    @include padding-top(11, 6);
+    @include padding-right(30, 15);
+    @include padding-bottom(11, 6);
+    @include padding-left(30, 15);
+    margin: 0 auto;
+
+    width: 50%;
+
+    @include font(12, 10);
+    font-weight: 700;
+
+    color: $fff;
+    background-color: $red;
+
+    border: none;
+    border-radius: 45px;
+
+    transition: transform 0.3s, opacity 0.3s;
+
+    &:hover {
+      transform: scale(1.02);
+
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+}

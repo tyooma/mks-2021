@@ -14,17 +14,26 @@ const Event = ({ event, deleteEvent }) => {
       <div className='event__info'>
         <div className='event__title'>{event.title}</div>
         <div className='event__desc'>{event.description}</div>
+        <div className='event__link-container'>
+          <div className='event__link-title'>Посилання на подію: &nbsp;</div>
+          <a
+            href={event.url}
+            target='_blank'
+            rel='noreferrer'
+            className='event__link'
+          >
+            {event.url}
+          </a>
+        </div>
       </div>
       {auth.uid ? (
         <div className='event__delete'>
           <ion-icon
             name='close-outline'
-            onClick={deleteEvent(event.megaId)}
+            onClick={() => deleteEvent(event.megaId)}
           />
         </div>
-      ) : (
-        ''
-      )}
+      ) : null}
     </div>
   )
 }

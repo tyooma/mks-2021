@@ -5,6 +5,7 @@ import cx from 'classnames'
 
 import EventsList from './Events/EventsList'
 import AddEventForm from './AddEventForm'
+
 import arrowLeft from '../assets/arrow-left.svg'
 import arrowRight from '../assets/arrow-right.svg'
 
@@ -75,7 +76,7 @@ export const Calendar = () => {
                 },
                 { calendar__today: d === today.getDate() },
                 { calendar__selected: d === day },
-                {calendar__selected: calendarDays.getDate() === day}
+                { calendar__selected: calendarDays.getDate() === day }
               )}
               onClick={() => {
                 setDate(new Date(year, month, d))
