@@ -12,15 +12,16 @@ function EventsList(props) {
 
   useEffect(() => {
     if (eventList) {
-      setEvents(Object.keys(eventList).map((key) => {
-        return {
-          ...eventList[key],
-          megaId: key
-        }
-      }))
+      setEvents(
+        Object.keys(eventList).map((key) => {
+          return {
+            ...eventList[key],
+            megaId: key
+          }
+        })
+      )
     }
   }, [eventList])
-  
 
   const date = props.date.toDateString()
 
@@ -30,7 +31,11 @@ function EventsList(props) {
           {events.map((event) =>
             event.eventDate === date ? (
               <Event event={event} key={event.id} />
-            ) : null
+            ) : (
+              <div className='event__no-event'>
+                На жаль, подій на цю дату немає
+              </div>
+            )
           )}
         </div>
       )

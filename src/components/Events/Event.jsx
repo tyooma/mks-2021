@@ -14,17 +14,14 @@ const Event = ({ event, deleteEvent }) => {
       <div className='event__info'>
         <div className='event__title'>{event.title}</div>
         <div className='event__desc'>{event.description}</div>
-        <div className='event__link-container'>
-          <div className='event__link-title'>Посилання на подію: &nbsp;</div>
-          <a
-            href={event.url}
-            target='_blank'
-            rel='noreferrer'
-            className='event__link'
-          >
-            {event.url}
-          </a>
-        </div>
+        <a
+          href={event.url}
+          target='_blank'
+          rel='noreferrer'
+          className='event__link'
+        >
+          Посилання на подію
+        </a>
       </div>
       {auth.uid ? (
         <div className='event__delete'>

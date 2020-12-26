@@ -28,6 +28,9 @@
 
   &__info {
     @include padding-left(100, 15);
+
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -44,13 +47,16 @@
     @include line-height(30, 18);
   }
 
-  &__link-container {
-    display: flex;
-  }
-
   &__link {
     text-decoration: none;
+    text-overflow: ellipsis;
     color: rgb(85, 155, 247);
+
+    transition: color 0.3s;
+
+    &:hover {
+      color: rgb(48, 136, 252);
+    }
   }
 
   &__delete {
@@ -65,12 +71,20 @@
 
     color: $red;
 
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     &:hover {
       transform: rotate(90deg);
 
       cursor: pointer;
     }
+  }
+
+  &__no-event {
+    @include margin-top(30, 15);
+
+    @include font(25, 14);
+    font-weight: 500;
+    text-align: center;
   }
 }
