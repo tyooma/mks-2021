@@ -13,9 +13,11 @@ export const MemberForm = ({ isFormVisible, setIsFormVisible }) => {
     e.preventDefault()
     setSended(!sended)
 
+    console.log(e.target)
+
     emailjs.sendForm(
       'service_62qyzyn',
-      'template_jqfl6sr',
+      'template_oe2sdmc',
       e.target,
       'user_HFG8Dr9h2xgIUHJTEUCT2'
     )
@@ -68,22 +70,50 @@ export const MemberForm = ({ isFormVisible, setIsFormVisible }) => {
         Виберіть одну або кілька ініціатив
       </label>
       <div>
-        <p className='forms__choose'>
-          <input type='checkbox' name='user_initiatives' value='ofar' />
-          &nbsp;OPEN FORMAT ART-RESIDENCE
-        </p>
-        <p className='forms__choose'>
-          <input type='checkbox' name='user_initiatives' value='sesam' />
-          &nbsp;SESAM Poliklinika
-        </p>
-        <p className='forms__choose'>
-          <input type='checkbox' name='user_initiatives' value='zosya' />
-          &nbsp;Золота Осінь Славутича
-        </p>
-        <p className='forms__choose'>
-          <input type='checkbox' name='user_initiatives' value='goldenfest' />
-          &nbsp;GOLDENFEST
-        </p>
+        <div className='forms__fake-checkbox'>
+          <input
+            type='checkbox'
+            name='user_initiatives'
+            value='OPEN FORMAT ART-RESIDENCE'
+            id='fake-checkbox_1'
+          />
+          <label htmlFor='fake-checkbox_1' className='forms__fake-label'>
+            OPEN FORMAT ART-RESIDENCE
+          </label>
+        </div>
+        <div className='forms__fake-checkbox'>
+          <input
+            type='checkbox'
+            name='user_initiatives'
+            value='SESAM Poliklinika'
+            id='fake-checkbox_2'
+          />
+          <label htmlFor='fake-checkbox_2' className='forms__fake-label'>
+            SESAM Poliklinika
+          </label>
+        </div>
+        <div className='forms__fake-checkbox'>
+          <input
+            type='checkbox'
+            name='user_initiatives'
+            value='Золота Осінь Славутича'
+            id='fake-checkbox_3'
+          />
+          <label htmlFor='fake-checkbox_3' className='forms__fake-label'>
+            Золота Осінь Славутича
+          </label>
+        </div>
+        <div className='forms__fake-checkbox'>
+          <input
+            type='checkbox'
+            name='user_initiatives'
+            value='GOLDENFEST'
+            id='fake-checkbox_4'
+          />
+          <label htmlFor='fake-checkbox_4' className='forms__fake-label'>
+            GOLDENFEST
+          </label>
+        </div>
       </div>
 
       <hr className='forms__line' />
@@ -92,14 +122,32 @@ export const MemberForm = ({ isFormVisible, setIsFormVisible }) => {
         Виберіть тип участі
       </label>
       <div>
-        <p className='forms__choose'>
-          <input type='radio' name='user_partician' value='ofar' />
-          &nbsp;Я згоден стати учасником
-        </p>
-        <p className='forms__choose'>
-          <input type='radio' name='user_partician' value='sesam' />
-          &nbsp;Я згоден стати волонтером
-        </p>
+        <fieldset id='user__partician' className='forms__fieldset'>
+          <div className='forms__fake-checkbox'>
+            <input
+              type='radio'
+              name='user_partician'
+              value='Я згоден стати учасником'
+              id='fake-checkbox_5'
+              className='forms__radio'
+            />
+            <label htmlFor='fake-checkbox_5' className='forms__fake-label'>
+              Я згоден стати учасником
+            </label>
+          </div>
+          <div className='forms__fake-checkbox'>
+            <input
+              type='radio'
+              name='user_partician'
+              value='Я згоден стати волонтером'
+              id='fake-checkbox_6'
+              className='forms__radio'
+            />
+            <label htmlFor='fake-checkbox_6' className='forms__fake-label'>
+              Я згоден стати волонтером
+            </label>
+          </div>
+        </fieldset>
       </div>
 
       <label htmlFor='notes' className='forms__label'>

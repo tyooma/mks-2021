@@ -31,11 +31,7 @@ function EventsList(props) {
           {events.map((event) =>
             event.eventDate === date ? (
               <Event event={event} key={event.id} />
-            ) : (
-              <div className='event__no-event'>
-                На жаль, подій на цю дату немає
-              </div>
-            )
+            ) : null
           )}
         </div>
       )
