@@ -151,7 +151,7 @@ export const MemberForm = ({ isFormVisible, setIsFormVisible }) => {
       </div>
 
       <label htmlFor='notes' className='forms__label'>
-        Посилання на Ваші роботи або послуги
+        Посилання на свої роботи або послуги
       </label>
       <textarea
         name='user_notes'
