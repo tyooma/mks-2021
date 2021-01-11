@@ -9,7 +9,7 @@ init('user_HFG8Dr9h2xgIUHJTEUCT2')
 export const MemberForm = ({ isFormVisible, setIsFormVisible }) => {
   const [sended, setSended] = useState(false)
 
-  const sendEmail = (e) => {
+  const sendEmail = e => {
     e.preventDefault()
     setSended(!sended)
 

@@ -9,13 +9,17 @@
   display: flex;
   flex-direction: column;
 
-  overflow: hidden;
-
   background-color: $fff;
 
   border: 1px solid $grey;
   border-radius: 20px;
   box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.2);
+
+  @media (max-height: 900px) {
+    @include height(900, 300);
+    
+    overflow-y: auto;
+  }
 
   &__title {
     @include margin-bottom(40, 20);
